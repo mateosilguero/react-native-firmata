@@ -1,0 +1,28 @@
+{
+  "name": "react-native-firmata",
+  "version": "0.0.1",
+  "author": "Mateo Silguero mfsilguero@gmail.com",
+  "private": false,
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrToph/react-native-android-library-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrToph/react-native-android-library-boilerplate/issues"
+  },
+  "homepage": "https://github.com/MrToph/react-native-android-library-boilerplate",
+  "keywords": [
+    "react-native",
+    "android",
+    "firmata",
+    "library"
+  ],
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.38.0"
+  }
+}
