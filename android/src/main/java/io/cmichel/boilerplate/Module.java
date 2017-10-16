@@ -23,7 +23,7 @@ public class Module extends ReactContextBaseJavaModule {
   private static final String DURATION_SHORT_KEY = "SHORT";
   private static final String DURATION_LONG_KEY = "LONG";
 
-  ublic final static String VERSION = "0.2.0";
+    public final static String VERSION = "0.2.0";
     public final static String TAG = "ArduinoFirmata";
 
     public static final byte INPUT  = 0;
@@ -294,7 +294,6 @@ public class Module extends ReactContextBaseJavaModule {
         }
     }
 
-}
 
   public Module(ReactApplicationContext reactContext) {
     super(reactContext);
