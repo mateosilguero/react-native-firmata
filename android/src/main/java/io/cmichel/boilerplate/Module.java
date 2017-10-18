@@ -73,7 +73,7 @@ public class Module extends ReactContextBaseJavaModule {
         return String.valueOf(majorVersion)+"."+String.valueOf(minorVersion);
     }
 
-    public ArduinoFirmata(android.app.Activity context){
+    public void ArduinoFirmata(android.app.Activity context){
         this.context = context;
         UsbManager manager = (UsbManager) context.getSystemService(Context.USB_SERVICE);
         this.usb = UsbSerialProber.acquire(manager);
