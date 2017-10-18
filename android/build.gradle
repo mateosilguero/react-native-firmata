@@ -41,4 +41,6 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    compile files('arduino-firmata.jar')
+    compile files('usb-serial-for-android-v010.jar')
 }

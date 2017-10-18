@@ -8,7 +8,11 @@ import com.facebook.react.bridge.ReactMethod;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.hardware.usb.UsbDevice;
 import com.hoho.android.usbserial.driver.*;
+import org.shokai.firmata.ArduinoFirmata;
+import org.shokai.firmata.ArduinoFirmataEventHandler;
+import org.shokai.firmata.ArduinoFirmataDataHandler;
 
 import java.io.*;
 import java.lang.*;
