@@ -26,9 +26,14 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 22
+        multiDexEnabled true
         versionCode 1
         // get version name from package.json version
         versionName computeVersionName()
+    }
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+        all*.exclude group: 'com.android.support', module: 'support-annotations'
     }
     lintOptions {
         abortOnError false
