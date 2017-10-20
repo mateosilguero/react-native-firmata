@@ -32,8 +32,7 @@ android {
         versionName computeVersionName()
     }
     configurations {
-        all*.exclude group: 'com.android.support', module: 'support-v4'
-        all*.exclude group: 'com.android.support', module: 'support-annotations'
+        compile.exclude group: 'com.android', module: 'JarMerger'  
     }
     lintOptions {
         abortOnError false
