@@ -83,6 +83,7 @@ public class Module extends ReactContextBaseJavaModule {
         this.usb = UsbSerialProber.acquire(manager);
     }
 
+    @ReactMethod
     public void connect() throws IOException, InterruptedException{
         if(this.usb == null) throw new IOException("device not found");
         try{
@@ -122,7 +123,7 @@ public class Module extends ReactContextBaseJavaModule {
                 });
             this.th_receive.start();
         }
-
+        Toast.makeText(getReactApplicationContext(), 'Usb Open', 1500).show();
         byte[] writeData = {0, 1};
         for (byte i = 0; i < 6; i++) {
             write((byte)(REPORT_ANALOG | i));
@@ -134,10 +135,12 @@ public class Module extends ReactContextBaseJavaModule {
         }
     }
 
+    @ReactMethod
     public boolean isOpen(){
         return this.usb != null;
     }
 
+    @ReactMethod
     public boolean close(){
         try{
             this.usb.close();
@@ -150,6 +153,7 @@ public class Module extends ReactContextBaseJavaModule {
         }
     }
 
+    @ReactMethod
     public void write(byte[] writeData){
         try{
             if(this.isOpen()) this.usb.write(writeData, 100);
