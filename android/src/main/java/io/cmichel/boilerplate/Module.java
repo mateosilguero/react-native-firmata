@@ -195,11 +195,13 @@ public class Module extends ReactContextBaseJavaModule {
         return analogInputData[pin];
     }
 
+    @ReactMethod
     public void pinMode(int pin, byte mode) {
         byte[] writeData = {SET_PIN_MODE, (byte)pin, mode};
         write(writeData);
     }
 
+    @ReactMethod
     public void digitalWrite(int pin, boolean value) {
         byte portNumber = (byte)((pin >> 3) & 0x0F);
         if (!value) digitalOutputData[portNumber] &= ~(1 << (pin & 0x07));
