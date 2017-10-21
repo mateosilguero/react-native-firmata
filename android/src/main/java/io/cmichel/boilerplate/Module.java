@@ -123,7 +123,8 @@ public class Module extends ReactContextBaseJavaModule {
                 });
             this.th_receive.start();
         }
-        Toast.makeText(getReactApplicationContext(), 'Usb Open', 1500).show();
+        CharSequence text = "Usb Open";
+        Toast.makeText(getReactApplicationContext(), text, 1500).show();
         byte[] writeData = {0, 1};
         for (byte i = 0; i < 6; i++) {
             write((byte)(REPORT_ANALOG | i));
