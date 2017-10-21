@@ -78,8 +78,8 @@ public class Module extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void ArduinoFirmata(android.app.Activity context){
-        this.context = context;
+    public void ArduinoFirmata(){
+        this.context = getReactApplicationContext();
         UsbManager manager = (UsbManager) context.getSystemService(Context.USB_SERVICE);
         this.usb = UsbSerialProber.acquire(manager);
     }
